@@ -1,0 +1,95 @@
+criação do repositório
+1-$ git init
+Initialized empty Git repository in C:/Users/ALUNO-16/Documents/GitHub luis/Meu_ projeto/.git/
+2-configuração do usuário
+$ git config --global user.email"lscarlos85@gmail.com"
+$ git config --global user.name "Luis Carlos"
+3 primeiro commit
+$ git add README.md
+git commit -m "Adiciona README inicial"
+[master (root-commit) f34c487] Adiciona README inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+4-modificação e novo commit
+$ git commit -m "Adiciona README inicial"
+[master aa13dd2] Adiciona README inicial
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+$ git add README.md
+$ git commit -m "Atualiza README com mais informações"
+On branch master
+nothing to commit, working tree clean
+
+5- Trabalhando com brach
+$ git branch feature-nova
+$ git checkout feature-nova
+Switched to branch 'feature-nova'
+
+6-Trabalhando em uma Branch
+$ touch script.js
+$ echo "console.log('Hello World');" > script.js
+$ git commit -m "Adiciona script inicial"
+[feature-nova 753e218] Adiciona script inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 script.js
+
+7-Merge de Branch
+$ git checkout master
+Switched to branch 'master'
+
+$ git merge feature-nova
+Updating aa13dd2..753e218
+Fast-forward
+ script.js | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 script.js
+
+
+Trabalhando com Repositórios Remotos
+8-$ git init
+Reinitialized existing Git repository in C:/Users/ALUNO-16/Documents/GitHub luis/Meu_ projeto/.git/
+$ git commit -m "primeiro commit"
+[master 2f32c36] primeiro commit
+ 1 file changed, 1 insertion(+)
+
+9-Enviando Alterações para o Remoto
+$ git remote add origin https://github.com/LuisSousa13/Projeto_git.git
+$  git push -u origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.07 KiB | 1.07 MiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/LuisSousa13/Projeto_git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+10-Atualizando o Repositório Local
+no GitHub
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.01 KiB | 257.00 KiB/s, done.
+From https://github.com/LuisSousa13/Projeto_git
+   2f32c36..8a5aa20  main       -> origin/main
+Updating 2f32c36..8a5aa20
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+
+
+
+
+
+
+
+
+
+
+
